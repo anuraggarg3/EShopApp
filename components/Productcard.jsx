@@ -16,7 +16,6 @@ const Productcard = ({item,handlelike}) => {
         <Image style={styles.image} source={{uri:item.image}}/>
         <Text style={styles.textheading}>{item.title}</Text>
         <Text style={styles.price}>₹{item.price}</Text>
-        {/* <View style={styles.favicon}><FontAwesome name="heart" size={35} color={"darkblue"}/></View> */}
         <TouchableOpacity activeOpacity={0.9} style={styles.favicon} onPress={()=>handlelike(item)}>{
          (item?.fav)?<FontAwesome name="heart-o" size={30} color={"red"} />:<FontAwesome name="heart" size={30} color={"red"} />
         }</TouchableOpacity>

@@ -6,7 +6,7 @@ export const CartProvider=({children})=>{
     const [totalprice,settotalprice]=useState(0);
     const [userInput, setUserInput] = useState({});
     const [cart,setcart] = useState(()=>{return ([])});
-    console.log("userInput",userInput);
+    // console.log("userInput",userInput);
     useEffect(()=>{
         loadcartitems();
         loaduserdata();
@@ -47,7 +47,7 @@ export const CartProvider=({children})=>{
         sum=sum+item.price;
     })
     settotalprice(sum);
-    console.log(sum)
+    // console.log(sum)
     }
     return (
         <CartContext.Provider value={{cart,setcart,addtocart,totalprice,deleteitemfromcart,userdata,loaduserdata,userInput}}>

@@ -12,13 +12,8 @@ import CartScreen from './src/screen/CartScreen';
 import { CartContext, CartProvider } from './context/CartContext';
 import ProfileScreen from './src/screen/ProfileScreen';
 import Profileedit from './src/screen/Profileedit';
-function SettingsScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Settings!</Text>
-    </View>
-  );
-}
+import FavScreen from './src/screen/FavScreen';
+
 const MyHomeStack=()=>{
   return(
     <Stack.Navigator screenOptions={{headerShown:false}} initialRouteName='Home'>
@@ -51,7 +46,7 @@ export default function App() {
         tabBarShowLabel:false,
         tabBarActiveTintColor:"black",
       }}
-      // initialRouteName='Cart'
+      initialRouteName='FavItem'
       >
         <Tab.Screen name="Home" component={MyHomeStack} 
         options={{
@@ -60,7 +55,7 @@ export default function App() {
             />
           }
         }} />
-        <Tab.Screen name="Reorder" component={SettingsScreen}
+        <Tab.Screen name="FavItem" component={FavScreen}
           options={{
             tabBarIcon:({size,color})=>{
               return <FontAwesome name={"heart"} size={size} color={color}

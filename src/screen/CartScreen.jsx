@@ -7,7 +7,7 @@ import { CartContext } from '../../context/CartContext';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 const CartScreen = () => {
     const {cart,totalprice,deleteitemfromcart}=useContext(CartContext);
-    console.log("cart.lenght",cart.length);
+    // console.log("cart.lenght",cart.length);
   return (
     <LinearGradient colors={['#deecff', '#e4ecf7', '#f2f3f5']}
     style={styles.linearGradient} >
