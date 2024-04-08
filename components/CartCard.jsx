@@ -12,7 +12,7 @@ const CartCard = ({item,deleteitemfromcart}) => {
         <View style={{marginHorizontal:15,flex:1}}>
       <Text style={{fontSize:24,color:"black",fontWeight:'500'}}>{item.title}</Text>
       <Text style={{fontSize:18,color:"black"}}>{item.price}</Text>
-      <Text style={{fontSize:20,color:"black",marginTop:15,fontWeight:'400'}}>Size: {item.size}</Text>
+      {/* <Text style={{fontSize:20,color:"black",marginTop:15,fontWeight:'400'}}>Size: {item.size}</Text> */}
       </View>
       <TouchableOpacity onPress={()=>deleteitemfromcart(item)}>
       <FontAwesome6 name="trash" size={22} color={"red"}/>

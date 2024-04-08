@@ -30,9 +30,9 @@ const Productdetail = () => {
         <Text style={{color:"black",fontWeight:'600',fontSize:20}}>{item.title}</Text>
         <Text style={{color:"black",fontWeight:'600',fontSize:20}}>{item.price}</Text>
         </View>
-        <Text style={{color:"black",fontSize:25,fontWeight:'bold',marginLeft:15}}>Size :</Text>
+        <Text style={{color:"black",fontSize:20,fontWeight:'bold',marginLeft:15}}>Rating :{item.rating.rate} ⭐</Text>
     </View>
-    <View style={styles.sizecontainer}>
+    {/* <View style={styles.sizecontainer}>
     {sizes.map((size,index)=>{
     return(
     <TouchableOpacity onPress={()=>{setsize(size)}}
@@ -44,7 +44,7 @@ const Productdetail = () => {
       : <Text  style={{color:"black",fontSize:20,fontWeight:'normal',paddingHorizontal:10,borderRadius:10}}> {size} </Text>}  
     </TouchableOpacity>)
  })}
- </View>
+ </View> */}
  <TouchableOpacity 
  activeOpacity={0.8}
  onPress={()=>{handleaddtocart(item)}}
@@ -74,6 +74,7 @@ const styles = StyleSheet.create({
         width:"90%",
         borderRadius:15,
         marginLeft:15,
+        resizeMode:'stretch'
     },
     textcontiner:{
         flexDirection:"row",

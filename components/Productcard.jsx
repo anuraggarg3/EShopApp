@@ -36,7 +36,8 @@ const styles = StyleSheet.create({
         width:"90%",
         borderRadius:20,
         marginLeft:10,
-        alignContent:'space-between'
+        alignContent:'space-between',
+        resizeMode:'stretch',
     },
     textheading:{
       fontSize:20,
